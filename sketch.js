@@ -117,12 +117,12 @@ function draw() {
   drawSprites();
 
 
-  if (keyDown("r")&&gamestate==END){
+  if (keyDown("r")||touches.length>0&&gamestate==END){
     gamestate=PLAY
     obstaclesgroup.destroyEach()
     cloudsgroup.destroyEach()
     score=0
-    
+    touches=[]
   }
 }
 
