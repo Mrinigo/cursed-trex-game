@@ -80,8 +80,9 @@ function draw() {
     restart.visible = false
    ground.velocityX = -4;
     // jump when the space key is pressed
-    if(keyDown("space")&& trex.y >= height-120) {
+    if(touches.length>0||keyDown("space")&& trex.y >= height-120) {
       trex.velocityY = -10;
+      touches=[]
     }
     trex.velocityY = trex.velocityY + 0.8
     if (ground.x < 0){
